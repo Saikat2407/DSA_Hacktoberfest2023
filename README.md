@@ -14,9 +14,9 @@
 In each respective folder on any topic, don't forget to read the rules below to get your pull request accepted.</h3>
 <p>👷‍♂️ Contribute anything to this repo and earn rewards!</p>
 <br/>
-<p>⚙️ Visit The Hacktoberfest website for more information <a href="https://hacktoberfest.com/">Hacktoberfest 2022</a>
+<p>⚙️ Visit The Hacktoberfest website for more information <a href="https://hacktoberfest.com/">Hacktoberfest 2023</a>
 <br/>
-<img src="https://user-images.githubusercontent.com/99472914/192144059-5cd0b329-f238-474b-b475-7385eaa35d05.png" alt="Hacktoberfest2023">
+<!-- <img src="https://user-images.githubusercontent.com/99472914/192144059-5cd0b329-f238-474b-b475-7385eaa35d05.png" alt="Hacktoberfest2023"> -->
 
 <hr/>
 <h2>🛠 Welcome to Hacktobefest 2023 Event</h2>
