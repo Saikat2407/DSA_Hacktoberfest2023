@@ -1,1 +1,13 @@
-Add java programming question here!
+Java Program to Check Leap Year
+Java Program to Read The Number From Standard Input
+Java Program to Get Input from the User
+Java Program to Multiply Two Floating-Point Numbers
+Java Program to Swap Two Numbers
+Java Program to Add Two Binary Strings
+Java Program to Add Two Complex numbers
+Java Program to Check Even or Odd Integers
+Java Program to Find Largest Among 3 Numbers
+Java Program to Check whether input character is vowel or consonant
+Java Program to Find Factorial of a number
+Java Program to Calculate Compound Interest
+Java Program to Find the Perimeter of a Rectangle
