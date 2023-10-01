@@ -1,17 +1,23 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
+//  code for getting unique elements of a vector
 int main()
 {
-    vector<int> arr{3, 2, 4};
-    for (int i = 0; i < arr.size(); i++)
+    vector<string> fruits{"apple", "banana", "apple", "cherry", "cherry"};
+    vector<string> result;
+
+    for (unsigned i = 0; i < fruits.size(); ++i)
     {
-        for (int j = i + 1; j < arr.size(); j++)
+        if (count(result.begin(), result.end(), fruits.at(i)) == 0)
         {
-            if (arr[i] + arr[j] == 6)
-                cout << "[" << arr[i] << "," << arr[j] << "]" << endl;
+            result.push_back(fruits.at(i));
         }
     }
 
-    return 0;
+    for (auto &element : result)
+    {
+        cout << element << "  ";
+    }
 }
