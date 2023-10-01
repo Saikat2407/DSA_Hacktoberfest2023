@@ -1,53 +1,23 @@
-#include <iostream>
-
-using namespace std;
-
-int lcs(string s, string t){ // Time and space compexity = O(mn)
-    int m = s.size();
-    int n = t.size();
-    
-    int **ans = new int*[m+1];
-    
-    for(int i=0; i<=m; i++){
-        ans[i] = new int[n+1];
-    }
-    
-    for(int i=0; i<=m; i++){
-        ans[i][0] = 0;
-    }
-    
-    for(int j=0; j<=n; j++){
-        ans[0][j] = 0;
-    }
-    
-    for(int i=1; i<=m; i++){
-        for(int j=1; j<=n; j++){
-            
-            if(s[m-i] == t[n-j]){ // Important line to understand
-                ans[i][j] = 1 + ans[i-1][j-1];
+// Question link: https://leetcode.com/problems/longest-common-subsequence/description/c
+class Solution {
+public:
+     int spaceOptimise(string text1,string text2){
+        vector<int> curr(text2.length()+1,0);
+        vector<int> next(text2.length()+1,0);
+        for(int i=text1.length()-1;i>=0;i--){
+            for(int j=text2.length()-1;j>=0;j--){
+                    int ans;
+                    if(text1[i]==text2[j])
+                        ans=1+next[j+1];
+                    else
+                        ans=max(curr[j+1],next[j]);
+                    curr[j]=ans;
             }
-            else{
-                int a = ans[i][j-1];
-                int b = ans[i-1][j];
-                ans[i][j] = max(a, b);
-                
-            }
+            next=curr;
         }
+        return next[0];
     }
-    
-    return ans[m][n];
-    
-    
-}
-
-int main()
-{
-    string s, t;
-    cin >> s>>t;
-    int ans = lcs(s, t);
-    cout<<ans<<endl;
-
-    return 0;
-}
-
-
+    int longestCommonSubsequence(string text1, string text2) {
+        return spaceOptimise(text1,text2);
+    }
+};
