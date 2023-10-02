@@ -7,7 +7,6 @@ Given two integer arrays gas and cost, return the starting gas station's index i
 otherwise return -1. If there exists a solution, it is guaranteed to be unique
 
 Question Link : https://leetcode.com/problems/gas-station/description/
-subission Link : https://leetcode.com/problems/gas-station/submissions/1010179879/
 
 Time: O(N)
 Space: O(1)
