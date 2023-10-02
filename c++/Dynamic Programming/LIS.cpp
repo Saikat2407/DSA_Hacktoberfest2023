@@ -1,3 +1,5 @@
+// question link : https://leetcode.com/problems/longest-increasing-subsequence/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -38,7 +40,7 @@ int main()
     }
 
     long long ans = lengthOfLIS(arr);
-    cout<<"Longest common subsequences is : "<<ans<<endl;
+    cout<<"length of the Longest common subsequences is : "<<ans<<endl;
     return 0;
 }
 
