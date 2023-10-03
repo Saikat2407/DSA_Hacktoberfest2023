@@ -1,3 +1,5 @@
+https://leetcode.com/problems/intersection-of-two-linked-lists/
+
 class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
