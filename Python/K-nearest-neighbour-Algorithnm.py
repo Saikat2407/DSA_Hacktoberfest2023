@@ -1,3 +1,4 @@
+#Python script that uses scikit-learn to perform classification on the Iris dataset using the k-nearest neighbors (KNN) algorithm.
 # Import necessary modules
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
