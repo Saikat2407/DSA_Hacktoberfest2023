@@ -1,6 +1,7 @@
 #Leetcode Problem 6
 #Zigzag Conversion
 #Medium
+#Link: "https://leetcode.com/problems/zigzag-conversion/description/"
 
 def convert(s: str, numRows: int) -> str:
     if numRows < 2:
