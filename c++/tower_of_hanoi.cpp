@@ -1,30 +1,20 @@
 #include <iostream>
-
-// Function to move a disk from source peg to destination peg
-void towerOfHanoi(int n, char source, char auxiliary, char destination) {
+using namespace std;
+void TowerOfHanoi(int n, char source, char aux, char dest) {
     if (n == 1) {
-        std::cout << "Move disk 1 from " << source << " to " << destination << std::endl;
+        cout << "Move disk 1 from " << source << " to " << dest << endl;
         return;
     }
-
-    // Move n-1 disks from source to auxiliary peg using destination as auxiliary
-    towerOfHanoi(n - 1, source, destination, auxiliary);
-
-    // Move the nth disk from source to destination peg
-    std::cout << "Move disk " << n << " from " << source << " to " << destination << std::endl;
-
-    // Move the n-1 disks from auxiliary peg to destination peg using source as auxiliary
-    towerOfHanoi(n - 1, auxiliary, source, destination);
+    TowerOfHanoi(n - 1, source, dest, aux);
+    cout << "Move disk " << n << " from " << source << " to " << dest << endl;
+    TowerOfHanoi(n - 1, aux, source, dest);
 }
-
 int main() {
-    int numDisks = 3; // Change this to the number of disks you want to solve for
+    int NumDisks = 3;
     char source = 'A';
-    char auxiliary = 'B';
-    char destination = 'C';
-
-    std::cout << "Tower of Hanoi solution with " << numDisks << " disks:" << std::endl;
-    towerOfHanoi(numDisks, source, auxiliary, destination);
-
+    char aux = 'B';
+    char dest = 'C';
+    cout << "Tower of Hanoi solution with " << NumDisks << " disks:" << endl;
+    TowerOfHanoi(NumDisks, source, aux, dest);
     return 0;
 }
