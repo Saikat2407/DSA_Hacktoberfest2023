@@ -1,3 +1,4 @@
+//Problem link::https://leetcode.com/problems/make-array-empty/
 class Solution {
     int[] seg;
     void build(int index,int start,int end){
