@@ -14,7 +14,6 @@ int main() {
     }
     return 0;
 }
-
 int removeDuplicates(std::vector<int>& nums) {
     int count = 0;
     int n = nums.size();
