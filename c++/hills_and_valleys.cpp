@@ -4,6 +4,8 @@ You are given a 0-indexed integer array nums. An index i is part of a hill in nu
 Note that for an index to be part of a hill or valley, it must have a non-equal neighbor on both the left and right of the index.
 
 Return the number of hills and valleys in nums.
+
+Link: https://leetcode.com/problems/count-hills-and-valleys-in-an-array/description/
 */
 
 
