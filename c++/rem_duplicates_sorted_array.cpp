@@ -31,7 +31,6 @@ int removeDuplicates(std::vector<int>& nums) {
             a.push_back(ele);
         }
     }
-
     nums = a;  // Update the original vector
     return a.size();
 }
