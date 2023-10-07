@@ -1,0 +1,37 @@
+ Ps: You are given an encoded string s. To decode the string to a tape, the encoded string is read one character at a time and the following steps are taken:
+
+If the character read is a letter, that letter is written onto the tape.
+If the character read is a digit d, the entire current tape is repeatedly written d - 1 more times in total.
+Given an integer k, return the kth letter (1-indexed) in the decoded string.
+
+Example 1:
+
+Input: s = "leet2code3", k = 10
+Output: "o"
+Explanation: The decoded string is "leetleetcodeleetleetcodeleetleetcode".
+The 10th letter in the string is "o".
+
+ // solution :
+
+class Solution {
+public:
+    string solve(string s,int k,long long len){
+        for(int i=0; i<s.length(); i++){
+            if(isalpha(s[i])){
+                len++;
+                if(len==k)return string(1,s[i]);
+            }
+            else{
+                if(1ll*len*(s[i]-'0')>=k){
+                    if(k%len==0)return solve(s,len,0);
+                    else return solve(s,k%len,0);
+                }
+                len = len*(s[i]-'0');
+            }
+        }
+        return "";
+    }
+    string decodeAtIndex(string s, int k) {
+        return solve(s,k,0);
+    }
+};
