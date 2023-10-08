@@ -1,0 +1,71 @@
+class Animal {
+    private String name;
+    private int age;
+
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    private String breed;
+
+    public Dog(String name, int age, String breed) {
+        super(name, age);
+        this.breed = breed;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog("Buddy", 3, "Golden Retriever");
+
+        System.out.println("Name: " + myDog.getName());
+        System.out.println("Age: " + myDog.getAge());
+        System.out.println("Breed: " + myDog.getBreed());
+
+        myDog.makeSound();
+
+        Animal myAnimal = new Dog("Max", 2, "Labrador");
+        myAnimal.makeSound();
+
+        myAnimal.setName("Rex");
+        myAnimal.setAge(4);
+        System.out.println("Updated Name: " + myAnimal.getName());
+        System.out.println("Updated Age: " + myAnimal.getAge());
+    }
+}
