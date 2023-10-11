@@ -30,3 +30,10 @@ void display(){
   }
         cout << temp->data << endl;
 }
+
+int main(){
+  creation(10);
+  creation(20);
+  creation(30);
+  display();
+}
