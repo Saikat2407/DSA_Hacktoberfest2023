@@ -1,0 +1,3 @@
+---For Educational Codeforces Round---
+Naming format: (Problem Name)_Edu(Round No.)(Problem Letter)
+Example: Sum on Subarrays_Edu145C
