@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(228, 222, 215); */
+}
+.navbar-brand{
+    background-color: cyan;
+    border-radius: 10px;
+    margin: 25px;
+    padding: 20px;
+    cursor: pointer;
+}
+#Weather_app:hover{
+    color: ghostwhite;
+    background-color: rgb(163, 146, 146);
+}
+.container-fluid{
+    background-color: black;
+    border-radius: 15px;
+}
+#d-flex{
+    display: flex!important;
+    margin-left: 785px;
+    justify-content: right;
+}
+#rounded-3{
+    border: 2px solid grey;
+    transition: transform 0.5s ease;
+}
+#rounded-3:hover{
+    #tut{
+        background-color: grey;
+    }
+    transform: scale(1.1);
+}
+#rounded-4{
+    border: 2px solid grey;
+    transition: transform 0.5s ease;
+}
+#rounded-4:hover{
+    #tut1{
+        background-color: grey;
+    }
+    transform: scale(1.1);
+}
+#rounded-5{
+    border: 2px solid grey;
+    transition: transform 0.5s ease;
+    height: 259px;
+}
+#rounded-5:hover{
+    #tut2{
+        background-color: grey;
+    }
+    transform: scale(1.1);
+}
+.containerpy-3{
+    background-color: cyan;
+    margin: 34px;
+    padding-right: 90px;
+    padding-left: 90px;
+}
+#my-4{
+    text-align: center;
+    margin-left: 34px;
+    color: black;
+}
+.fs-4{
+    height: 23px;
+    font-size: 25px;
+}
+div :hover{
+    transition: cubic-bezier(0.23, 1, 0.320, 1);
+}
