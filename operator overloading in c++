@@ -1,0 +1,71 @@
+/*Using the concept of operator overloading. Implement a program to overload the 
+following:
+a. Unary –
+b. Unary ++ preincrement, postincrement
+c. Unary -- predecrement, postdecrement*/
+#include <iostream>
+using namespace std;
+
+class Number{
+    private:
+    int value;
+    public:
+    Number(int val):value(val){}
+
+    Number operator-()
+    {
+        return (-value);
+    }
+    Number& operator++()
+    {
+        ++value;
+        return(*this);
+    }
+    Number operator++(int)
+    {
+        Number temp(*this);
+        ++value;
+        return temp;
+    }
+    //pre decrement, post decrement
+    Number& operator--()
+    {
+        --value;
+        return(*this);
+    }
+    Number operator--(int)
+    {
+        Number temp(*this);
+        --value;
+        return temp;
+    }
+    void display()
+    {
+        cout<<value;
+    }
+};
+int main()
+{
+    Number num(15);
+    cout<<"******Original value******: ";
+    num.display();
+    ++num;
+    cout<<"\nAfter preincrement : ";
+    num.display();
+    Number result=num++;
+    cout<<"\nNew value and previous value : ";
+    num.display();
+    cout<<endl;
+    result.display();
+    --num;
+    cout<<"\npre decremented value : ";
+    num.display();
+    Number result1=num--;
+    cout<<"\nprevious and new value are : ";
+    result1.display();
+    cout<<endl;
+    num.display();
+    Number negated=-num;
+    cout<<"\nNegated value is : ";
+    negated.display();
+}
