@@ -1,4 +1,7 @@
+
+// Question link : https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
 //description of the question ->
+
 
 // An array arr is a mountain if the following properties hold:
 
@@ -33,10 +36,9 @@
 // arr is guaranteed to be a mountain array.
 
 
-#include <bits/stdc++.h>
-using namespace std;
-
-int peakIndexInMountainArray(vector<int>& arr) {
+class Solution {
+public:
+    int peakIndexInMountainArray(vector<int>& arr) {
         
         int s = 0 ; 
         int e = arr.size()-1; 
@@ -55,12 +57,6 @@ int peakIndexInMountainArray(vector<int>& arr) {
         } 
         return -1;
 
-}
+    }
+};
 
-int main(){
-
-    vector<int> arr = { 0,1,2,1,0};
-    int peakIndex = peakIndexInMountainArray(arr) ; 
-    cout<<"The peak Index of the given array is : "<<peakIndex;
-    return 0;
-}
