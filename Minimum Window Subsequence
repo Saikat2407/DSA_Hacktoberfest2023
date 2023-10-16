@@ -1,0 +1,83 @@
+// User function Template for C++
+
+class Solution {
+  public:
+    string minWindow(string str1, string str2) {
+        // Write your Code here
+        map<int, vector<string>> m;
+        string ret;
+        
+        int startIndex = -1;
+        int tempIndex = 0;
+        
+        for(int i = 0; i < str1.size(); ++i)
+        {
+            if(str1[i] == str2[tempIndex])
+            {
+                
+                //cout << str1[i] << ":" << str2[tempIndex] << ":" << i << ":" << startIndex << ":" << tempIndex << endl;
+    
+                
+                if(startIndex == -1) //start of first char match
+                {
+                    startIndex = i;
+                }
+                
+                if(startIndex >=0 && (tempIndex == (str2.size()-1))) //end of match
+                {
+                    string temp = str1.substr(startIndex, i-startIndex+1);
+                    
+                    int EndIndex = temp.length()-1;
+                    int EndIndexStr2 = str2.length()-1;
+                    while(EndIndex >= 0)
+                    {
+                        if(temp[EndIndex] == str2[EndIndexStr2])
+                        {
+                            EndIndexStr2--;
+                        }
+                        if(EndIndexStr2<0) //match in reverse
+                        {
+                            temp = temp.substr(EndIndex);
+                            break;
+                        }
+                        EndIndex--;
+                    }
+                    
+                    tempIndex = 0;
+                    startIndex = -1;
+                    map<int, vector<string>>::iterator iter;
+                    iter = m.find(temp.length());
+                    //cout << temp.c_str() << " ";
+                    if(iter == m.end())
+                    {
+                        vector<string> vec;
+                        vec.push_back(temp);
+                        m[temp.length()] = vec;
+                    }
+                    else
+                    {
+                        iter->second.push_back(temp);
+                    }
+                }
+                else
+                {
+                    tempIndex++;
+                }
+            }
+            
+            if((startIndex >= 0) && (i-1 == startIndex) && (str1[i] == str1[startIndex]))
+                startIndex++;
+        }
+        
+        if(m.size())
+        {
+            for(const auto& iter : m)
+            {
+                ret = iter.second[0];
+                break;
+            }
+        }
+        
+        return ret;
+    }
+};
