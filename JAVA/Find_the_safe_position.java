@@ -16,10 +16,10 @@ Here, n = 2 and k = 1, then safe position is
  */
 
  // Solution -
- class Solution {
+ public class Solution {
     
     // Function to find the position of the last remaining person in the Josephus problem
-    static int josephus(int n, int k) {
+    public static int josephus(int n, int k) {
         if (n == 1)
             return 1;
         else
@@ -32,7 +32,7 @@ Here, n = 2 and k = 1, then safe position is
     }
     
     // Function to find the safe position in the Josephus problem
-    static int safePos(int n, int k) {
+    public static int safePos(int n, int k) {
         return josephus(n,k);
     }
 }
