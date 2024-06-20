@@ -1,0 +1,20 @@
+{
+  "name": "dsa_hacktoberfest2023",
+  "version": "1.0.0",
+  "description": "<h1>Hacktober Fest 2023⚡️✨</h1>\r <p> All Contributors are requested to star this repo and follow me for a successful merge of pull request.🙂</p>\r <br/>\r <h3>👉 Add any project, algorithm or leetcode solution in any programming language..<br/>\r -🚀 C <br/>\r -🚀 C++ <br/>\r -🚀 C# <br/>\r -🚀 PHP <br/>\r -🚀 Java <br/>\r -🚀 Python <br/>\r -🚀 Javascript <br/>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heeba-khan/DSA_Hacktoberfest2023.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heeba-khan/DSA_Hacktoberfest2023/issues"
+  },
+  "homepage": "https://github.com/heeba-khan/DSA_Hacktoberfest2023#readme"
+}
